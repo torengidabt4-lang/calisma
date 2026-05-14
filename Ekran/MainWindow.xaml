@@ -32,24 +32,26 @@
             </Border>
 
             <!-- Kontrol Paneli -->
-            <Border Grid.Column="1" Background="White" CornerRadius="8" Margin="0,0,0,0">
-                <StackPanel Padding="15" VerticalAlignment="Top">
-                    <TextBlock Text="Kontroller" FontSize="16" FontWeight="Bold" Margin="0,0,0,15" Foreground="#212121"/>
+            <Border Grid.Column="1" Background="White" CornerRadius="8">
+                <Grid Margin="15">
+                    <StackPanel VerticalAlignment="Top">
+                        <TextBlock Text="Kontroller" FontSize="16" FontWeight="Bold" Margin="0,0,0,15" Foreground="#212121"/>
 
-                    <Button Content="Ekran Güncelle" Click="UpdateScreen_Click" 
-                            Background="#2196F3" Foreground="White" Padding="10" Margin="0,5" Height="40" FontSize="12" FontWeight="Bold"/>
+                        <Button Content="Ekran Güncelle" Click="UpdateScreen_Click" 
+                                Background="#2196F3" Foreground="White" Padding="10" Margin="0,5" Height="40" FontSize="12" FontWeight="Bold"/>
 
-                    <Button Content="Mouse Test" Click="MouseTest_Click" 
-                            Background="#FF9800" Foreground="White" Padding="10" Margin="0,5" Height="40" FontSize="12" FontWeight="Bold"/>
+                        <Button Content="Mouse Test" Click="MouseTest_Click" 
+                                Background="#FF9800" Foreground="White" Padding="10" Margin="0,5" Height="40" FontSize="12" FontWeight="Bold"/>
 
-                    <Button Content="Klavye Test" Click="KeyboardTest_Click" 
-                            Background="#4CAF50" Foreground="White" Padding="10" Margin="0,5" Height="40" FontSize="12" FontWeight="Bold"/>
+                        <Button Content="Klavye Test" Click="KeyboardTest_Click" 
+                                Background="#4CAF50" Foreground="White" Padding="10" Margin="0,5" Height="40" FontSize="12" FontWeight="Bold"/>
 
-                    <Button Content="Kapat" Click="Close_Click" 
-                            Background="#F44336" Foreground="White" Padding="10" Margin="0,5" Height="40" FontSize="12" FontWeight="Bold"/>
+                        <Button Content="Kapat" Click="Close_Click" 
+                                Background="#F44336" Foreground="White" Padding="10" Margin="0,5" Height="40" FontSize="12" FontWeight="Bold"/>
 
-                    <TextBlock Text="" x:Name="StatusText" Margin="0,15,0,0" FontSize="11" Foreground="#666666" TextWrapping="Wrap"/>
-                </StackPanel>
+                        <TextBlock Text="" x:Name="StatusText" Margin="0,15,0,0" FontSize="11" Foreground="#666666" TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Grid>
             </Border>
         </Grid>
 
