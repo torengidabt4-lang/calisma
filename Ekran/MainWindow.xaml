@@ -6,8 +6,7 @@
         mc:Ignorable="d"
         Title="Ekran - Uzaktan Masaüstü" Height="600" Width="900"
         Background="#F5F5F5"
-        WindowStartupLocation="CenterScreen"
-        Icon="Resources/app.ico">
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -17,7 +16,7 @@
 
         <!-- Başlık Bar -->
         <StackPanel Grid.Row="0" Background="#2196F3" Orientation="Horizontal" Height="60" VerticalAlignment="Center">
-            <TextBlock Text="📺 Ekran Paylaşım" Foreground="White" FontSize="24" FontWeight="Bold" Margin="20,0,0,0" VerticalAlignment="Center"/>
+            <TextBlock Text="Ekran Paylaşım" Foreground="White" FontSize="24" FontWeight="Bold" Margin="20,0,0,0" VerticalAlignment="Center"/>
         </StackPanel>
 
         <!-- Ana İçerik -->
@@ -33,23 +32,25 @@
             </Border>
 
             <!-- Kontrol Paneli -->
-            <StackPanel Grid.Column="1" Background="White" CornerRadius="8" Padding="15" VerticalAlignment="Top">
-                <TextBlock Text="Kontroller" FontSize="16" FontWeight="Bold" Margin="0,0,0,15" Foreground="#212121"/>
+            <Border Grid.Column="1" Background="White" CornerRadius="8" Margin="0,0,0,0">
+                <StackPanel Padding="15" VerticalAlignment="Top">
+                    <TextBlock Text="Kontroller" FontSize="16" FontWeight="Bold" Margin="0,0,0,15" Foreground="#212121"/>
 
-                <Button Content="🖥️ Ekran Güncelle" Click="UpdateScreen_Click" 
-                        Background="#2196F3" Foreground="White" Padding="10" Margin="0,5" Height="40" FontSize="12" FontWeight="Bold"/>
+                    <Button Content="Ekran Güncelle" Click="UpdateScreen_Click" 
+                            Background="#2196F3" Foreground="White" Padding="10" Margin="0,5" Height="40" FontSize="12" FontWeight="Bold"/>
 
-                <Button Content="🖱️ Mouse Test" Click="MouseTest_Click" 
-                        Background="#FF9800" Foreground="White" Padding="10" Margin="0,5" Height="40" FontSize="12" FontWeight="Bold"/>
+                    <Button Content="Mouse Test" Click="MouseTest_Click" 
+                            Background="#FF9800" Foreground="White" Padding="10" Margin="0,5" Height="40" FontSize="12" FontWeight="Bold"/>
 
-                <Button Content="⌨️ Klavye Test" Click="KeyboardTest_Click" 
-                        Background="#4CAF50" Foreground="White" Padding="10" Margin="0,5" Height="40" FontSize="12" FontWeight="Bold"/>
+                    <Button Content="Klavye Test" Click="KeyboardTest_Click" 
+                            Background="#4CAF50" Foreground="White" Padding="10" Margin="0,5" Height="40" FontSize="12" FontWeight="Bold"/>
 
-                <Button Content="❌ Kapat" Click="Close_Click" 
-                        Background="#F44336" Foreground="White" Padding="10" Margin="0,5" Height="40" FontSize="12" FontWeight="Bold"/>
+                    <Button Content="Kapat" Click="Close_Click" 
+                            Background="#F44336" Foreground="White" Padding="10" Margin="0,5" Height="40" FontSize="12" FontWeight="Bold"/>
 
-                <TextBlock Text="" x:Name="StatusText" Margin="0,15,0,0" FontSize="11" Foreground="#666666" TextWrapping="Wrap"/>
-            </StackPanel>
+                    <TextBlock Text="" x:Name="StatusText" Margin="0,15,0,0" FontSize="11" Foreground="#666666" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Border>
         </Grid>
 
         <!-- Alt Bar -->
