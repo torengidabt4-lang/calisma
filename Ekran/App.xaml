@@ -1,0 +1,12 @@
+<Application x:Class="Ekran.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Ekran"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Color x:Key="PrimaryColor">#2196F3</Color>
+        <Color x:Key="SecondaryColor">#1976D2</Color>
+        <Color x:Key="BackgroundColor">#F5F5F5</Color>
+        <Color x:Key="TextColor">#212121</Color>
+    </Application.Resources>
+</Application>

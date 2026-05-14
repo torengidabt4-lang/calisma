@@ -1,0 +1,30 @@
+# Visual Studio
+.vs/
+.vscode/
+bin/
+obj/
+*.user
+*.suo
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+
+# NuGet
+.nuget/
+*.nupkg
+*.snupkg
+
+# Local history
+.history/
+.ionide/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+*.code-workspace
