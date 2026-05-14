@@ -16,7 +16,7 @@ namespace Ekran
             screenCapture = new ScreenCapture();
             mouseControl = new MouseControl();
             keyboardControl = new KeyboardControl();
-            UpdateStatusBar("Uygulama başlatıldı");
+            UpdateStatusBar("Uygulama baslatildi");
         }
 
         private void UpdateScreen_Click(object sender, RoutedEventArgs e)
@@ -25,12 +25,12 @@ namespace Ekran
             {
                 BitmapImage screenshot = screenCapture.CaptureScreen();
                 ScreenImage.Source = screenshot;
-                UpdateStatusBar("✓ Ekran güncellendi");
-                StatusText.Text = "Son güncelleme: " + DateTime.Now.ToString("HH:mm:ss");
+                UpdateStatusBar("Ekran guncellendi");
+                StatusText.Text = "Son guncelleme: " + DateTime.Now.ToString("HH:mm:ss");
             }
             catch (Exception ex)
             {
-                UpdateStatusBar("✗ Hata: " + ex.Message);
+                UpdateStatusBar("Hata: " + ex.Message);
             }
         }
 
@@ -39,12 +39,12 @@ namespace Ekran
             try
             {
                 mouseControl.SimulateClick();
-                UpdateStatusBar("✓ Mouse tıklaması gönderildi");
-                StatusText.Text = "Mouse kontrolü test edildi";
+                UpdateStatusBar("Mouse tiklamasi gonderildi");
+                StatusText.Text = "Mouse kontrolu test edildi";
             }
             catch (Exception ex)
             {
-                UpdateStatusBar("✗ Hata: " + ex.Message);
+                UpdateStatusBar("Hata: " + ex.Message);
             }
         }
 
@@ -53,12 +53,12 @@ namespace Ekran
             try
             {
                 keyboardControl.SendKey('A');
-                UpdateStatusBar("✓ Klavye tuşu gönderildi");
-                StatusText.Text = "Klavye kontrolü test edildi";
+                UpdateStatusBar("Klavye tusu gonderildi");
+                StatusText.Text = "Klavye kontrolu test edildi";
             }
             catch (Exception ex)
             {
-                UpdateStatusBar("✗ Hata: " + ex.Message);
+                UpdateStatusBar("Hata: " + ex.Message);
             }
         }
 

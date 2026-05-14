@@ -5,16 +5,12 @@ namespace Ekran
 {
     public class KeyboardControl
     {
-        // Windows API fonksiyonları
         [DllImport("user32.dll")]
         private static extern void keybd_event(byte bVk, byte bScan, int dwFlags, IntPtr dwExtraInfo);
 
         private const int KEYEVENTF_KEYDOWN = 0x0000;
         private const int KEYEVENTF_KEYUP = 0x0002;
 
-        /// <summary>
-        /// Tuş kodlarını gönderir
-        /// </summary>
         public void SendKey(char key)
         {
             try
@@ -26,31 +22,25 @@ namespace Ekran
             }
             catch (Exception ex)
             {
-                throw new Exception("Tuş gönderimi başarısız: " + ex.Message);
+                throw new Exception("Tus gonderimi basarisiz: " + ex.Message);
             }
         }
 
-        /// <summary>
-        /// Enter tuşuna basılır
-        /// </summary>
         public void PressEnter()
         {
             try
             {
-                byte vKey = 0x0D; // Enter tuşu
+                byte vKey = 0x0D;
                 keybd_event(vKey, 0, KEYEVENTF_KEYDOWN, IntPtr.Zero);
                 System.Threading.Thread.Sleep(50);
                 keybd_event(vKey, 0, KEYEVENTF_KEYUP, IntPtr.Zero);
             }
             catch (Exception ex)
             {
-                throw new Exception("Enter basma başarısız: " + ex.Message);
+                throw new Exception("Enter basma basarisiz: " + ex.Message);
             }
         }
 
-        /// <summary>
-        /// Metin yazısını gönderir
-        /// </summary>
         public void SendText(string text)
         {
             try
@@ -63,7 +53,7 @@ namespace Ekran
             }
             catch (Exception ex)
             {
-                throw new Exception("Metin gönderimi başarısız: " + ex.Message);
+                throw new Exception("Metin gonderimi basarisiz: " + ex.Message);
             }
         }
     }

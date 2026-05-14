@@ -7,25 +7,18 @@ namespace Ekran
 {
     public class ScreenCapture
     {
-        /// <summary>
-        /// Ekran görüntüsünü alır ve WPF için BitmapImage olarak döndürür
-        /// </summary>
         public BitmapImage CaptureScreen()
         {
             try
             {
-                // Ekranın boyutlarını al
                 int screenWidth = (int)System.Windows.SystemParameters.PrimaryScreenWidth;
                 int screenHeight = (int)System.Windows.SystemParameters.PrimaryScreenHeight;
 
-                // Bitmap oluştur
                 Bitmap screenshot = new Bitmap(screenWidth, screenHeight);
                 Graphics graphics = Graphics.FromImage(screenshot);
 
-                // Ekranı çiz
                 graphics.CopyFromScreen(0, 0, 0, 0, new Size(screenWidth, screenHeight));
 
-                // Bitmap'i BitmapImage'a çevir
                 BitmapImage bitmapImage = new BitmapImage();
                 using (MemoryStream memoryStream = new MemoryStream())
                 {
@@ -45,7 +38,7 @@ namespace Ekran
             }
             catch (Exception ex)
             {
-                throw new Exception("Ekran görüntüsü alınamadı: " + ex.Message);
+                throw new Exception("Ekran goruntus alınamadı: " + ex.Message);
             }
         }
     }
